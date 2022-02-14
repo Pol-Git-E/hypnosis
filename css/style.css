@@ -1,70 +1,183 @@
  body{
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
-   font-size:14px;
-   color:88888d;
+   margin: 0;/* */
+   font-family: 'Roboto', sans-serif;/*задает шрифт для элемента. */
+   font-size:14px;/*задает размер шрифта */
+   color:88888d;/*цвет */
+   overflow-x:hidden;/* указывает, следует ли обрезать содержимое, добавить полосу прокрутки или отобразить содержимое overflow элемента уровня блока, когда оно перетекает по левому и правому краю. вданном случае Содержимое обрезается, и механизм прокрутки не предоставляется */
 
  }
 /* алгоритм подсчета размера блоков */
  *,
- *:before,
- *:after{
-   box-sizing:border-box;
+ *:before, /*Псевдоэлемент :before применяется для отображения желаемого контента до содержимого элемента, к которому он добавляется. Работает совместно со свойством content.*/
+ *:after{ /*Псевдоэлемент, который используется для вывода желаемого текста после содержимого элемента, к которому он добавляется. Псевдоэлемент :after работает совместно со свойством content.*/
+   box-sizing:border-box;/*Применяется для изменения алгоритма расчета ширины и высоты элемента.*/
 
  }
 /* container
 ============= */
 .container {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
+  width: 100%;/* */
+  max-width: 1170px;/* */
+  margin: 0 auto;/* */
 }
 
  /* header
  =============== */
  .header {
-   width: 100%;
-    top:0;
-    left:0;
-    z-index: 1000;
+   width: 100%;/* */
+    top:0;/* */
+    left:0;/* */
+    z-index: 1000;/* */
  }
 
  .header_inner {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   align-items: center;
-   padding: 35px 0;
+   display: flex;/* */
+   align-items: center;/* */
+   justify-content: space-between;/* */
+   align-items: center;/* */
+   padding: 35px 0;/* */
  }
 
  /* Nav
 ===================*/
 .nav{
-  display: flex;
-  font-size:17px;
+  display: flex;  /* */
+  font-size:17px; /* */
 
 }
 .nav_link{
-  margin-left:50px;
+  margin-left:50px; /* */
   color:#888;
-  text-decoration: none;
-  opacity: 0.75;
-  transition: .1s linear;
+  text-decoration: none;/* */
+  opacity: 0.75;/* */
+  transition: .1s linear;/* */
 }
 
 .nav_link:first-child{
-  margin-left: 0;
+  margin-left: 0;      /* */
 }
 
 .nav_link:hover{
-  opacity: 1;
-  color: black;
+  opacity: 1; /* */
+  color: black;/* */
 }
 
 
  /* intro
 ===================*/
-
+/* */
 .imgbox1{
-  width: 1351px;
+  width: 1351px; /* */
 }
+
+/* */
+.home{
+text-align: left;/* */
+padding: 10px;/* */
+margin: 10px 0 10px 10px;/* */
+font-size: 16px;/* */
+line-height: 1.5;/* */
+color: #888;/* */
+}
+
+/* */
+.imgbox2{
+  float: left;/* */
+  margin: 30px 20px  40px;/* */
+}
+ h2{
+  color: #9cc038;/* */
+  font-family: "Roboto" sans-serif ;/* */
+  font-size: 24px;/* */
+}
+/* */
+.block{
+  position: relative;/* */
+    width: 100%;/* */
+    display: block;/* */
+    margin: 0 auto;/* */
+    padding: 0;/* */
+    text-align: left;/* */
+    display: flex;/* */
+}
+/* */
+.block1, .block2, .block3, .block4{
+  margin: 40px;/* */
+	padding: 60px 30px;/* */
+	width: calc(33% - 24px);/* */
+	display: inline-block;/* */
+  background-color: #9cc038;/* */
+  color:aliceblue;/* */
+  font-size: 14px;/* */
+  vertical-align: middle bottom;/* */
+  font-family: "Roboto" sans-serif ;/* */
+  line-height: 1.7;/* */
+
+}
+
+i {
+  border: solid black;/* */
+  border-width: 0 3px 3px 0;/* */
+  display: inline-block;/* */
+  padding: 10px;/* */
+}
+
+.right {
+  transform: rotate(-45deg);/* */
+  -webkit-transform: rotate(-45deg);/* */
+}
+
+.pic{
+  position: relative;/* */
+
+}
+
+.textbox{
+   position: absolute;/* */
+    bottom: 150px;/* */
+    right: 130px;/* */
+    background-color:#9cc038;/* */
+    width: 400px;/* */
+    height: 400px;/* */
+    color: white;/* */
+    font-size: 56px;/* */
+    font-family: "Roboto" sans-serif ;/* */
+    line-height: 1.3;/* */
+    font-style: normal;/* */
+    letter-spacing: 0px;/* */
+    font-weight: 300;/* */
+    padding-left: 30px;/* */
+}
+/* */
+.headline{
+  text-align: center;/* */
+}
+/* */
+.column {
+  width: 30%;/* */
+  margin: 10px;/* */
+	padding: 10px 25px;/* */
+	width: calc(33% - 24px);/* */
+	display: inline-block;/* */
+  color:#888;
+  font-size: 14px;
+  font-family: "Roboto" sans-serif ;
+  line-height: 1.7;
+}
+/* */
+.row:after {
+  content: "";
+  display: table;/* */
+   clear: both;/* */
+
+}
+/* */
+.fon{
+  background-color:#9cc038 ;/* */
+  padding-right: initial;
+  padding-left: initial;
+  padding-bottom: 90px;
+  padding-top: 90px;
+  width: 1349px;
+}
+
